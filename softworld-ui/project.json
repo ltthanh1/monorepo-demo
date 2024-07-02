@@ -1,0 +1,21 @@
+{
+  "name": "softworld-ui",
+  "$schema": "../../node_modules/nx/schemas/project-schema.json",
+  "sourceRoot": "softworld/ui/src",
+  "projectType": "library",
+  "tags": [],
+  "targets": {
+    "build": {
+      "executor": "@nx/esbuild:esbuild",
+      "outputs": ["{options.outputPath}"],
+      "options": {
+        "outputPath": "dist/softworld/ui",
+        "main": "softworld/ui/src/index.ts",
+        "tsConfig": "softworld/ui/tsconfig.lib.json",
+        "assets": ["softworld/ui/*.md"],
+        "generatePackageJson": true,
+        "format": ["cjs"]
+      }
+    }
+  }
+}
